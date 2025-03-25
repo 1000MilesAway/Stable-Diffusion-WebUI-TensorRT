@@ -66,7 +66,7 @@ def install():
             live=True,
         )
 
-    launch.run_pip("uninstall -y nvidia-cudnn-cu11", "nvidia-cudnn-cu11", live=True)
+    launch.run(["python", "-m", "pip", "uninstall", "-y", "nvidia-cudnn-cu11"], "removing nvidia-cudnn-cu11")
 
 
 install()
